@@ -959,11 +959,25 @@ export const getObjectArrayUniqueProperty = (objectArray, uniqueProperty) => {
 };
 
 
+const compareItemsForSorting = (itemOne, itemTwo) => {
+
+  if (typeof itemOne === "number") {
+
+    return itemOne - itemTwo;
+
+  } else {
+
+    return formatLowerCase(itemOne).replace(/^(a\.)/, "").replace(/^(the\.)/, "") > formatLowerCase(itemTwo).replace(/^(a\.)/, "").replace(/^(the\.)/, "");
+
+  };
+
+};
+
+
 export const sortObjectArrayByProperty = (objectArray, sortProperty, direction) => {
 
   // * https://flaviocopes.com/how-to-sort-array-of-objects-by-property-javascript/ -- 05/07/2022 MF
-
-  // ? Additional properties? -- 05/07/2022 MF
+  // * https://stackoverflow.com/questions/6913512/how-to-sort-an-array-of-objects-by-multiple-fields -- 03/06/2021 MF
 
   let sortedArray = [...objectArray];
 
@@ -976,6 +990,10 @@ export const sortObjectArrayByProperty = (objectArray, sortProperty, direction) 
     } else {
 
       sortedArray.sort((a, b) => (a[sortProperty] > b[sortProperty]) ? 1 : -1);
+
+      // sortedArray.sort((a, b) => (formatLowerCase(a[sortProperty]).replace("the ", "").replace("a ", "") > formatLowerCase(b[sortProperty]).replace("the ", "").replace("a ", "")) ? 1 : -1);
+
+      // sortedArray.sort((a, b) => (formatLowerCase(a[sortProperty]).replace(/^(a\.)/, "").replace(/^(the\.)/, "") > formatLowerCase(b[sortProperty]).replace(/^(a\.)/, "").replace(/^(the\.)/, "") ? 1 : -1));
 
     };
 
