@@ -1,12 +1,13 @@
 {
   "name": "shared-functions",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Contains common functions that could apply to all applications developed.",
-  "author": "Orbis Education",
-  "copyrightYear": "2021",
+  "author": "Michael Fisher",
+  "copyrightYear": "2022",
+  "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/orbis-education/shared-functions"
+    "url": "https://github.com/mirfishe/shared-functions"
   },
   "private": true,
   "main": "index.js",
