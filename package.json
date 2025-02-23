@@ -1,6 +1,6 @@
 {
   "name": "shared-functions",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Contains common functions that could apply to all applications developed.",
   "author": "Michael Fisher",
   "copyrightYear": "2025",
@@ -15,6 +15,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "html-react-parser": "^4.2.2"
+    "html-react-parser": "^5.1.10"
   }
 }
