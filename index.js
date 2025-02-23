@@ -1951,3 +1951,30 @@ export const generateHoursInterval = (startHourInMinutes, endHourInMinutes, inte
   return timesArray;
 
 };
+
+
+export const displayCommaBetweenTwoItems = (firstItem, secondItem) => {
+
+  let textValue = "";
+
+  if (isEmpty(firstItem) === false) {
+
+    textValue = firstItem;
+
+  };
+
+  if (isEmpty(firstItem) === false && isEmpty(secondItem) === false) {
+
+    textValue += ", ";
+
+  };
+
+  if (isEmpty(secondItem) === false) {
+
+    textValue += secondItem;
+
+  };
+
+  return textValue;
+
+};
